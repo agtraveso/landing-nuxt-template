@@ -1,0 +1,7 @@
+body {
+  @apply antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900;
+}
+
+.dark .highlight-white {
+  box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 5%);
+}
