@@ -4,6 +4,10 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  // https://nuxtjs.org/deployments/github-pages/
+  router: {
+    base: '/landing-nuxt-template/',
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
