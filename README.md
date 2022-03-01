@@ -1,6 +1,18 @@
-# landing-nuxt-template
+# Landing NuxJS template
 
-## Build Setup
+Hi there! This is an extensible Github template with the important stuff preconfigured: `components`, `auto-deploy`, `SEO` and `dark/light theme` that lets you build your landing page without effort.
+
+You can configure it to meet your specific needs.
+
+## First steps
+
+Click `Use this template` button next to clone button, and there you go. If you're curious check the [official docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+
+#### This is a NuxtJS based project
+
+This means you have the potential of [NuxtJS](https://nuxtjs.org/docs/get-started) on your hands, but we have added for you some content to make you life easier.
+
+To start and seeing the changes you are making start the app in development mode:
 
 ```bash
 # install dependencies
@@ -8,61 +20,51 @@ $ yarn install
 
 # serve with hot reload at localhost:3000
 $ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## components
 
-## Special Directories
+Take a look the Vue components we added, pick the ones that best fits your needs, tweak and change them!
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+## assets
 
-### `assets`
+Here we added some dummy images and a basic css. Delete and replace with yours.
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+## Styling & theme colors
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+We use [Tailwind](https://tailwindcss.com/docs) for styling. Update `tailwind.config.js` with your colors, we mainly use `stale` and `indigo` palettes.
 
-### `components`
+## SEO
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+Default SEO is configured in `nuxt.config.js`, we've already added some stuff. Check the [official docs](https://nuxtjs.org/docs/features/meta-tags-seo/) for fine tunning.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+## Auto deployment
 
-### `layouts`
+There is a pre-configured GitHub Action for [GitHub Pages](https://pages.github.com/) at [`.github/workflows/cd-gh-pages.yaml`](.github/workflows/cd-gh-pages.yaml).
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+To make it work go to your settings repository: `Settings` > `Pages` then select the branch `gh-pages` as the source. Every commit in `main` branch will trigger the deployment.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+## Troubleshooting
 
-### `pages`
+### Deploying to GitHub Pages returns: 404 There isn't a GitHub Pages site here.
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+Check that your project `name` in `package.json` matches the `router.base` in `nuxt.config.js`
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+```json nuxt.config.js
+  {
+  "name": "my-awesome-project",
+  "version": "1.0.0"
+  ...
+  }
+```
 
-### `plugins`
+```js nuxt.config.js
+  // https://nuxtjs.org/deployments/github-pages/
+  router: {
+    base: 'my-awesome-project',
+  },
+```
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+## License
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+Landing NuxtJS template is licensed under the [MIT License](https://github.com/tabler/tabler-icons/blob/master/LICENSE).
