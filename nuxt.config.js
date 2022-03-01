@@ -6,7 +6,7 @@ export default {
   target: 'static',
   // https://nuxtjs.org/deployments/github-pages/
   router: {
-    base: '/landing-nuxt-template/',
+    base: `/${process.env.npm_package_name}` || '',
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
