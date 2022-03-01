@@ -11,12 +11,57 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'landing-nuxt-template',
+    title: 'Landing NuxtJS template',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Rapidly build landing pages for your business with NuxtJS.',
+      },
+      { hid: 'og:type', name: 'og:type', content: 'website' },
+      {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'Landing NuxtJS template',
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://github.com/agtraveso/landing-nuxt-template',
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'Landing NuxtJS template',
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'Rapidly build landing pages for your business with NuxtJS.',
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://github.com/agtraveso/landing-nuxt-template',
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Landing NuxtJS template',
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: 'Rapidly build landing pages for your business with NuxtJS.',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
