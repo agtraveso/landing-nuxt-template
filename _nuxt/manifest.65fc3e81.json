@@ -1,7 +1,7 @@
 {
   "name": "landing-nuxt-template",
   "short_name": "landing-nuxt-template",
-  "description": "## Build Setup",
+  "description": "Hi there! This is an extensible Github template with the important stuff preconfigured: `components`, `auto-deploy`, `SEO` and `dark/light theme` that lets you build your landing page without effort.",
   "icons": [
     {
       "src": "/landing-nuxt-template/_nuxt/icons/icon_64x64.a10774.png",
